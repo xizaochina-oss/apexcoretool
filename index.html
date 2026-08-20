@@ -3,114 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Core Tools (ACT) | Premium Diamond Blades & Core Bits</title>
+    <title>Apex Core Tools (ACT) | Leading Diamond Tools Supplier from China</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background-color: #121212; color: #e0e0e0; line-height: 1.6; }
-        header { background: #000; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; border-bottom: 2px solid #d4af37; }
-        .logo { font-size: 24px; font-weight: bold; color: #d4af37; letter-spacing: 2px; }
-        .logo span { color: #fff; font-size: 13px; font-weight: normal; display: block; }
-        .header-right { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
-        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1200&q=80') center/cover; padding: 60px 5%; text-align: center; }
-        .hero h1 { font-size: 32px; color: #fff; margin-bottom: 15px; text-transform: uppercase; }
-        .hero p { font-size: 16px; color: #ccc; max-width: 800px; margin: 0 auto 25px; }
-        .btn-whatapp { background: #25D366; color: #fff; padding: 10px 24px; text-decoration: none; font-size: 16px; font-weight: bold; border-radius: 5px; display: inline-block; }
-        .section { padding: 40px 5%; max-width: 1200px; margin: 0 auto; }
-        .section-title { text-align: center; font-size: 24px; color: #d4af37; margin-bottom: 30px; text-transform: uppercase; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-        .card { background: #1e1e1e; padding: 20px; border-radius: 8px; border: 1px solid #333; text-align: center; }
-        .card h3 { color: #fff; margin-bottom: 10px; font-size: 18px; }
-        .card p { font-size: 14px; color: #aaa; margin-bottom: 15px; }
-        .table-container { overflow-x: auto; }
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; background: #1e1e1e; min-width: 500px; }
-        th, td { padding: 12px; border: 1px solid #333; text-align: left; font-size: 14px; }
-        th { background: #d4af37; color: #000; font-weight: bold; }
-        footer { background: #000; text-align: center; padding: 25px; border-top: 1px solid #333; color: #777; font-size: 13px; }
-        .float-wa { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border-radius: 50px; padding: 12px 22px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.5); z-index: 1000; font-size: 15px; }
-        @media (max-width: 600px) {
-            header { justify-content: center; text-align: center; }
-            .hero h1 { font-size: 22px; }
-            .hero p { font-size: 14px; }
+        :root {
+            --primary-color: #d9381e;
+            --dark-color: #1a1a1a;
+            --light-bg: #f8f9fa;
+            --text-color: #333;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        /* Header */
+        header {
+            background: var(--dark-color);
+            color: #fff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-header-wa {
+            background: #25D366;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: #fff;
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 25px auto;
+            color: #ddd;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--light-bg);
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: var(--dark-color);
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Specifications Table */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--dark-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: #888;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* Floating WhatsApp Button */
+        .float-wa {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero h1 {
+                font-size: 26px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <div class="logo">ACT <span>Apex Core Tools</span></div>
+        <a href=" " class="logo">Apex Core Tools <span>(ACT)</span></a >
         <div class="header-right">
-            <!-- 多语言切换下拉框 -->
             <div id="google_translate_element"></div>
-            <a href=" " class="btn-whatapp" style="padding: 6px 15px; font-size: 13px;">Contact Us</a >
+            <a href="https://wa.me/85296145818" class="btn-header-wa" target="_blank">WhatsApp Us</a >
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>CRITICAL PERFORMANCE, PROVEN RELIABILITY</h1>
-        <p>Your Professional OEM/ODM Supplier for Diamond Saw Blades, Core Drill Bits & Concrete Cutting Tools.</p >
-        <a href="https://wa.me/" class="btn-whatapp">Inquire via WhatsApp</a >
+        <h1>Leading Diamond Tools Supply Chain from China</h1>
+        <p>Your Reliable B2B OEM/ODM Partner for Professional Diamond Saw Blades & Core Drill Bits. Engineered for Maximum Durability & Precision Cutting.</p >
+        <a href="https://wa.me/85296145818" class="btn-primary" target="_blank">Get Factory Quote Now</a >
     </section>
 
+    <!-- About Section -->
     <section class="section">
-        <h2 class="section-title">Our Product Series</h2>
+        <h2 class="section-title">Why Partner With Apex Core Tools?</h2>
         <div class="grid">
             <div class="card">
-                <h3>Diamond Saw Blades</h3>
-                <p>350mm - 800mm High-frequency welded / Laser welded blades for reinforced concrete and asphalt cutting.</p >
+                <h3>China Top Supply Chain</h3>
+                <p>Direct factory sourcing delivering high cost-performance ratios, steady capacity, and robust quality control.</p >
             </div>
             <div class="card">
-                <h3>Core Drill Bits</h3>
-                <p>Heavy-duty diamond core bits for highway guardrail installation, wall penetration, and bridge engineering.</p >
+                <h3>Full OEM/ODM Capability</h3>
+                <p>Custom blade sizes, custom segment formulas, laser logo engraving, and tailored branded packaging boxes.</p >
             </div>
             <div class="card">
-                <h3>Grinding Wheels</h3>
-                <p>Double-row segment grinding cups for concrete surface smoothing and coating removal.</p >
+                <h3>Multi-Material Application</h3>
+                <p>Specialized diamond formulations designed for asphalt roads, reinforced concrete, granite, quartz, and marble.</p >
             </div>
         </div>
     </section>
 
+    <!-- Products Section -->
+    <section class="section" style="background-color: var(--light-bg);">
+        <h2 class="section-title">Core Product Line</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Diamond Saw Blades</h3>
+                <p>High-frequency laser-welded & sintered blades for road cutting, concrete slab slotting, and hard stone processing.</p >
+            </div>
+            <div class="card">
+                <h3>Diamond Core Drill Bits</h3>
+                <p>Heavy-duty wet & dry core bits built for reinforced concrete drilling, highway guardrails, and construction coring.</p >
+            </div>
+            <div class="card">
+                <h3>Custom Diamond Segments</h3>
+                <p>Premium grade diamond segments customized according to local aggregate hardness and cutting machinery specs.</p >
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Spec Table -->
     <section class="section">
-        <h2 class="section-title">Specifications Overview</h2>
+        <h2 class="section-title">Application Matrix</h2>
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Product Type</th>
-                        <th>Available Sizes</th>
-                        <th>Application</th>
-                        <th>Packaging</th>
+                        <th>Application Material</th>
+                        <th>Recommended Product</th>
+                        <th>Key Cutting Advantage</th>
+                        <th>Customization Support</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Concrete Blade</td>
-                        <td>350mm / 400mm / 500mm</td>
-                        <td>Cured Concrete, Asphalt</td>
-                        <td>Seaworthy Wooden Case</td>
+                        <td>Asphalt & Concrete Road</td>
+                        <td>Laser Welded Road Blades</td>
+                        <td>Fast cutting speed, anti-undercutting protection</td>
+                        <td>OEM Logo & Segment Height</td>
                     </tr>
                     <tr>
-                        <td>Diamond Core Bit</td>
-                        <td>32mm - 200mm</td>
-                        <td>Reinforced Concrete, Guardrails</td>
-                        <td>Individual Carton / Export Pallet</td>
+                        <td>Reinforced Concrete</td>
+                        <td>Diamond Core Bits & Saw Blades</td>
+                        <td>High steel-bar penetration, long lifespan</td>
+                        <td>Length, Thread & Formula</td>
+                    </tr>
+                    <tr>
+                        <td>Granite & Quartz Stone</td>
+                        <td>Silent / Standard Diamond Blades</td>
+                        <td>Clean edge finishing, minimal chipping</td>
+                        <td>Color, Packaging & Diameter</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Apex Core Tools (ACT). All Rights Reserved. | Official Website: apexcoretool.com</p >
     </footer>
 
-    <a href="https://wa.me/" class="float-wa" target="_blank">💬 Chat on WhatsApp</a >
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/85296145818" class="float-wa" target="_blank" title="Chat on WhatsApp">💬</a >
 
-    <!-- 自动翻译脚本 -->
+    <!-- Google Translate Script -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'en',
-                includedLanguages: 'en,fr,ru,es,pt,ar,zh-CN',
+                includedLanguages: 'en,fr,es,ru,ar,zh-CN',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }
