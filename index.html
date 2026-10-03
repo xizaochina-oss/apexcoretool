@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACT - Apex Core Tools | Industrial Diamond Saw Blades & Core Drill Bits</title>
-    <meta name="description" content="ACT (Apex Core Tools) is a leading OEM/ODM manufacturer of premium diamond saw blades, wall saw blades, asphalt cutting blades, and dry/wet diamond core drill bits.">
-    <meta name="keywords" content="diamond saw blade, core drill bit, wall saw blade, road cutting blade, laser welded segment, M14 thread, 1-1/4-7 UNC, concrete cutting, granite drilling, ACT tools, Apex Core Tools">
+    <title>ACT - Apex Core Tools | Industrial Diamond Saw Blades & Tools</title>
+    <meta name="description" content="ACT Apex Core Tools specializes in R&D and manufacturing of high-sharpness diamond saw blades, core drill bits, and diamond segments. Wholesale, Foreign Trade, OEM/ODM.">
+    <meta name="keywords" content="diamond saw blade, granite blade, diamond segment, tile blade, concrete cutting, ACT tools, Apex Core Tools">
     
-    <!-- Google Fonts & Font Awesome Icons -->
+    <!-- Google Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,16 +15,14 @@
     
     <style>
         :root {
+            --primary-red: #D32F2F;
             --primary-orange: #FF5500;
-            --orange-glow: rgba(255, 85, 0, 0.25);
-            --bg-dark: #0A0B0D;
-            --bg-card: #121418;
-            --bg-card-hover: #181B20;
-            --border-color: #22262E;
-            --border-highlight: #3A404D;
-            --text-title: #FFFFFF;
-            --text-body: #C2C7D0;
-            --text-muted: #7E8590;
+            --dark-bg: #111215;
+            --card-bg: #1A1C20;
+            --sidebar-bg: #16181C;
+            --border-color: #2A2D34;
+            --text-light: #FFFFFF;
+            --text-gray: #A0A5B0;
         }
 
         * {
@@ -34,374 +32,392 @@
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-body);
+            background-color: var(--dark-bg);
+            color: var(--text-light);
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
+            line-height: 1.5;
         }
 
-        h1, h2, h3, h4, .font-heading {
+        h1, h2, h3, h4, .brand-font {
             font-family: 'Chakra Petch', sans-serif;
             text-transform: uppercase;
         }
 
-        /* Header */
+        /* Top Header Navigation */
         header {
-            background-color: rgba(10, 11, 13, 0.95);
-            backdrop-filter: blur(12px);
+            background-color: #0A0B0D;
             border-bottom: 2px solid var(--primary-orange);
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
-        .nav-container {
-            max-width: 1280px;
+        .header-container {
+            max-width: 1300px;
             margin: 0 auto;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
         }
 
-        .logo-box {
+        .logo-group {
             display: flex;
             align-items: center;
             gap: 12px;
         }
 
         .logo-badge {
-            width: 42px;
-            height: 42px;
+            width: 40px;
+            height: 40px;
             background: var(--primary-orange);
-            clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
             color: #000;
             font-weight: 900;
             font-size: 1.4rem;
-            font-family: 'Chakra Petch', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
         }
 
         .logo-text {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 800;
-            color: var(--text-title);
-            letter-spacing: 1px;
+            color: #FFF;
         }
 
-        .logo-text span {
-            color: var(--primary-orange);
-        }
-
-        .sub-logo {
-            display: block;
-            font-size: 0.65rem;
-            color: var(--text-muted);
-            letter-spacing: 2px;
-            font-weight: 600;
-        }
+        .logo-text span { color: var(--primary-orange); }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.8rem;
         }
 
         nav a {
-            color: var(--text-body);
+            color: var(--text-light);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
+            font-size: 0.9rem;
             transition: color 0.2s;
         }
 
-        nav a:hover {
-            color: var(--primary-orange);
-        }
+        nav a:hover { color: var(--primary-orange); }
 
-        /* Hero Section with Custom Code SVG Graphics */
-        .hero {
-            background: radial-gradient(circle at 50% 30%, #1A1D24 0%, var(--bg-dark) 70%);
-            padding: 4rem 2rem;
+        /* Industrial Banner Section (Matching Reference Image) */
+        .industrial-banner {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80') center/cover;
+            padding: 3.5rem 2rem;
             border-bottom: 1px solid var(--border-color);
         }
 
-        .hero-container {
-            max-width: 1280px;
+        .banner-content {
+            max-width: 1300px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
         }
 
-        .hero-content h1 {
-            font-size: 3.2rem;
-            color: var(--text-title);
-            line-height: 1.1;
-            margin-bottom: 1.2rem;
-        }
-
-        .hero-content h1 span {
+        .banner-sub {
             color: var(--primary-orange);
-        }
-
-        .hero-content p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 2rem;
-        }
-
-        /* SVG Code Graphics Container */
-        .hero-graphics {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 15px var(--orange-glow);
-        }
-
-        .svg-product {
-            filter: drop-shadow(0 0 10px rgba(255, 85, 0, 0.3));
-            transition: transform 0.4s ease;
-        }
-
-        .svg-product:hover {
-            transform: scale(1.05) rotate(3deg);
-        }
-
-        /* WhatsApp Button */
-        .btn-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background-color: #25D366;
-            color: #000000;
-            padding: 0.9rem 2.2rem;
             font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .banner-title {
+            font-size: 2.8rem;
+            color: #FFF;
+            margin-bottom: 1rem;
             font-weight: 800;
-            text-decoration: none;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.2s;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
         }
 
-        .btn-whatsapp:hover {
-            background-color: #20BD5A;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .section-header {
+        .banner-tags {
             display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 2.5rem;
+            gap: 10px;
+            margin-bottom: 1.5rem;
         }
 
-        .section-tag {
-            width: 5px;
-            height: 32px;
-            background-color: var(--primary-orange);
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            color: var(--text-title);
-            letter-spacing: 1px;
-        }
-
-        /* Categories Grid */
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 4rem;
-        }
-
-        .category-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 2rem 1.5rem;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-        .category-card:hover {
-            background-color: var(--bg-card-hover);
-            border-color: var(--primary-orange);
-            transform: translateY(-4px);
-        }
-
-        .category-card .icon-wrapper {
-            width: 52px;
-            height: 52px;
-            background: rgba(255, 85, 0, 0.1);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.2rem;
+        .tag-badge {
+            background: rgba(255, 85, 0, 0.15);
+            border: 1px solid var(--primary-orange);
             color: var(--primary-orange);
-            font-size: 1.5rem;
-            border: 1px solid rgba(255, 85, 0, 0.25);
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
         }
 
-        .category-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.6rem;
-            color: var(--text-title);
+        /* Search Bar & Keywords */
+        .search-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.6);
+            padding: 1rem 1.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
-        .category-card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.5;
+        .hot-keywords {
+            font-size: 0.85rem;
+            color: var(--text-gray);
         }
 
-        /* Technical Tables */
-        .table-title {
-            color: var(--text-title);
-            font-size: 1.2rem;
-            margin: 2rem 0 1rem;
+        .hot-keywords span {
+            color: #FFF;
+            margin-left: 8px;
+            cursor: pointer;
+        }
+
+        .hot-keywords span:hover { color: var(--primary-orange); }
+
+        .search-box {
+            display: flex;
+        }
+
+        .search-box input {
+            padding: 0.5rem 1rem;
+            background: #1A1C20;
+            border: 1px solid var(--border-color);
+            color: #FFF;
+            outline: none;
+            font-size: 0.85rem;
+        }
+
+        .search-box button {
+            background: var(--primary-red);
+            color: #FFF;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .search-box button:hover { background: #B71C1C; }
+
+        /* Main B2B Portal Layout (Sidebar + Product Grid) */
+        .portal-container {
+            max-width: 1300px;
+            margin: 2.5rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+        }
+
+        /* Left Sidebar Categories */
+        .sidebar-menu {
+            background: var(--sidebar-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .sidebar-header {
+            background: var(--primary-red);
+            color: #FFF;
+            padding: 1rem 1.2rem;
+            font-size: 1.1rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .category-group {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .category-title {
+            background: #1C1E24;
+            padding: 0.8rem 1.2rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary-orange);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .category-list {
+            list-style: none;
+            padding: 0.5rem 0;
+        }
+
+        .category-list li a {
+            display: block;
+            padding: 0.5rem 1.2rem 0.5rem 2rem;
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .category-list li a:hover {
+            color: #FFF;
+            background: rgba(255, 85, 0, 0.1);
+            padding-left: 2.3rem;
+        }
+
+        /* Right Product Section Header */
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .products-title {
+            font-size: 1.4rem;
+            color: #FFF;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .table-title i {
-            color: var(--primary-orange);
+        .products-title span {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        .view-more {
+            color: var(--primary-red);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        /* Right Product Cards Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 1.2rem;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-orange);
+        }
+
+        /* Product Visual Canvas Box */
+        .product-img-box {
+            width: 100%;
+            height: 180px;
+            background: #0D0E11;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .product-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #FFF;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-btn {
+            display: inline-block;
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+
+        .product-card:hover .product-btn {
+            background: var(--primary-orange);
+            color: #000;
+            border-color: var(--primary-orange);
+            font-weight: 700;
+        }
+
+        /* Technical Tables */
+        .full-width-section {
+            max-width: 1300px;
+            margin: 0 auto 3rem;
+            padding: 0 2rem;
         }
 
         .table-wrapper {
             overflow-x: auto;
-            margin-bottom: 3.5rem;
-            background-color: var(--bg-card);
+            background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 4px;
+            margin-top: 1rem;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
-            font-size: 0.88rem;
+            font-size: 0.85rem;
         }
 
         th {
-            background-color: #0F1114;
+            background: #0D0E11;
             color: var(--primary-orange);
-            padding: 1.1rem 1rem;
-            font-family: 'Chakra Petch', sans-serif;
-            letter-spacing: 0.5px;
+            padding: 1rem;
             border-bottom: 2px solid var(--border-color);
-            font-weight: 700;
         }
 
         td {
-            padding: 1rem;
+            padding: 0.9rem 1rem;
             border-bottom: 1px solid var(--border-color);
-            color: var(--text-body);
+            color: var(--text-light);
         }
 
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        tr:hover td {
-            background-color: rgba(255, 85, 0, 0.03);
-            color: #FFFFFF;
-        }
-
-        /* Accordion FAQ (50+ Items, Compact 1/10 Height) */
-        .faq-accordion-container {
-            max-height: 550px;
+        /* Compact Accordion FAQ (1/10 Height) */
+        .faq-box {
+            max-height: 450px;
             overflow-y: auto;
-            padding-right: 10px;
-            background: var(--bg-card);
+            background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 1.5rem;
-        }
-
-        .faq-accordion-container::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .faq-accordion-container::-webkit-scrollbar-thumb {
-            background: var(--primary-orange);
+            padding: 1.2rem;
             border-radius: 4px;
         }
 
         details {
-            background: #0A0B0D;
+            background: #111215;
             border: 1px solid var(--border-color);
-            border-radius: 6px;
-            margin-bottom: 0.8rem;
-            transition: border-color 0.2s;
-        }
-
-        details[open] {
-            border-color: var(--primary-orange);
+            margin-bottom: 0.6rem;
+            border-radius: 3px;
         }
 
         summary {
-            padding: 1rem 1.2rem;
+            padding: 0.8rem 1rem;
             font-weight: 700;
-            color: var(--text-title);
+            color: #FFF;
             cursor: pointer;
-            list-style: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 0.95rem;
+            font-size: 0.88rem;
         }
 
-        summary::-webkit-detaihls-marker {
-            display: none;
-        }
-
-        summary::after {
-            content: '\f078';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            color: var(--primary-orange);
-            transition: transform 0.3s;
+        .faq-ans {
+            padding: 0.8rem 1rem;
+            color: var(--text-gray);
             font-size: 0.85rem;
-        }
-
-        details[open] summary::after {
-            transform: rotate(180deg);
-        }
-
-        .faq-content {
-            padding: 0 1.2rem 1.2rem 1.2rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
             border-top: 1px solid var(--border-color);
-            margin-top: 0.5rem;
-            padding-top: 0.8rem;
-        }
-
-        .faq-content strong {
-            color: var(--primary-orange);
         }
 
         /* Floating WhatsApp Button */
@@ -410,401 +426,307 @@
             bottom: 30px;
             right: 30px;
             background-color: #25D366;
-            color: #000000;
+            color: #000;
             border-radius: 50px;
-            padding: 14px 24px;
+            padding: 12px 22px;
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
             text-decoration: none;
             font-weight: 800;
-            font-size: 0.9rem;
             z-index: 1000;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-
-        .float-whatsapp:hover {
-            transform: scale(1.05);
-            background-color: #20BD5A;
         }
 
         /* Footer */
         footer {
-            background-color: #050607;
+            background: #07080A;
             border-top: 1px solid var(--border-color);
-            padding: 2.5rem 2rem;
+            padding: 2rem;
             text-align: center;
-            color: var(--text-muted);
+            color: var(--text-gray);
             font-size: 0.85rem;
         }
 
-        footer a {
-            color: var(--primary-orange);
-            text-decoration: none;
-        }
-
         @media (max-width: 900px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .nav-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
+            .portal-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Navigation -->
+    <!-- Header Navigation -->
     <header>
-        <div class="nav-container">
-            <div class="logo-box">
+        <div class="header-container">
+            <div class="logo-group">
                 <div class="logo-badge">A</div>
-                <div>
-                    <div class="logo-text">ACT <span>TOOLS</span></div>
-                    <span class="sub-logo">APEX CORE TOOLS INDUSTRIAL</span>
-                </div>
+                <div class="logo-text">ACT <span>TOOLS</span></div>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#materials">By Material</a></li>
-                    <li><a href="#equipment">By Equipment</a></li>
-                    <li><a href="#specs">Technical Specs</a></li>
-                    <li><a href="#faq">50+ Global FAQs</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#specs">Specifications</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="https://wa.me/85296145818" target="_blank" style="color: #25D366;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section with SVG Generated Hardware -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>High Precision <span>Diamond Saw Blades</span> & Core Bits</h1>
-                <p>ACT (Apex Core Tools) delivers heavy-duty diamond cutting & core drilling solutions for reinforced concrete, granite, asphalt, and tiles worldwide.</p>
-                <a href="https://wa.me/85296145818?text=Hello%20ACT,%20I%20am%20interested%20in%20your%20industrial%20diamond%20tools.%20Please%20send%20me%20a%20catalog." class="btn-whatsapp" target="_blank">
-                    <i class="fa-brands fa-whatsapp fa-xl"></i> Chat on WhatsApp
-                </a>
+    <!-- Industrial Top Banner (Matching Photo Slogan & Style) -->
+    <section class="industrial-banner">
+        <div class="banner-content">
+            <div class="banner-sub">PREMIER DIAMOND TOOLS MANUFACTURER</div>
+            <h1 class="banner-title">Focusing on R&D & Manufacturing of High-Sharpness Diamond Saw Blades</h1>
+            
+            <div class="banner-tags">
+                <span class="tag-badge">Wholesale</span>
+                <span class="tag-badge">Foreign Trade Procurement</span>
+                <span class="tag-badge">OEM / ODM Customization</span>
             </div>
 
-            <!-- Vector SVG Generated Industrial Tools -->
-            <div class="hero-graphics">
-                <!-- SVG Diamond Saw Blade -->
-                <svg class="svg-product" width="180" height="180" viewBox="0 0 200 200">
-                    <circle cx="100" cy="100" r="95" fill="#181B20" stroke="#FF5500" stroke-width="2"/>
-                    <!-- Segments -->
-                    <g fill="#FF5500">
-                        <rect x="94" y="2" width="12" height="18" rx="2"/>
-                        <rect x="94" y="180" width="12" height="18" rx="2"/>
-                        <rect x="2" y="94" width="18" height="12" rx="2"/>
-                        <rect x="180" y="94" width="18" height="12" rx="2"/>
-                        <rect x="28" y="28" width="14" height="14" rx="2" transform="rotate(45 35 35)"/>
-                        <rect x="158" y="28" width="14" height="14" rx="2" transform="rotate(45 165 35)"/>
-                        <rect x="28" y="158" width="14" height="14" rx="2" transform="rotate(45 35 165)"/>
-                        <rect x="158" y="158" width="14" height="14" rx="2" transform="rotate(45 165 165)"/>
-                    </g>
-                    <!-- Core Steel Body -->
-                    <circle cx="100" cy="100" r="75" fill="#22262E" stroke="#FF5500" stroke-width="1.5"/>
-                    <circle cx="100" cy="100" r="25" fill="#0A0B0D" stroke="#AAA" stroke-width="2"/>
-                    <!-- Pin holes -->
-                    <circle cx="100" cy="65" r="4" fill="#AAA"/>
-                    <!-- Brand Text -->
-                    <text x="100" y="105" font-family="'Chakra Petch', sans-serif" font-weight="900" font-size="16" fill="#FF5500" text-anchor="middle">ACT</text>
-                    <text x="100" y="120" font-family="sans-serif" font-size="7" fill="#AAA" text-anchor="middle">LASER WELDED</text>
-                </svg>
-
-                <!-- SVG Core Drill Bit -->
-                <svg class="svg-product" width="120" height="180" viewBox="0 0 120 200">
-                    <!-- Segments -->
-                    <path d="M 20 20 L 32 20 L 32 32 L 20 32 Z M 44 20 L 56 20 L 56 32 L 44 32 Z M 68 20 L 80 20 L 80 32 L 68 32 Z M 92 20 L 104 20 L 104 32 L 92 32 Z" fill="#FF5500"/>
-                    <!-- Main Tube -->
-                    <rect x="22" y="30" width="80" height="120" fill="#1C2026" stroke="#FF5500" stroke-width="1.5"/>
-                    <!-- Threaded Fitting Base -->
-                    <path d="M 35 150 L 87 150 L 77 185 L 45 185 Z" fill="#2D323C" stroke="#AAA" stroke-width="1"/>
-                    <rect x="42" y="185" width="40" height="12" fill="#FF5500"/>
-                    <!-- Brand Label -->
-                    <text x="62" y="85" font-family="'Chakra Petch', sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" text-anchor="middle" transform="rotate(-90 62 85)">ACT CORE</text>
-                </svg>
+            <div class="search-row">
+                <div class="hot-keywords">
+                    <strong>Hot Searches:</strong>
+                    <span>Diamond Saw Blade</span> | <span>Granite Blade</span> | <span>Diamond Segment</span> | <span>Core Drill Bit</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Enter keywords...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="container">
+    <!-- Main Portal (Left Sidebar + Right Product Grid) -->
+    <div class="portal-container" id="products">
 
-        <!-- 1. By Material Classification -->
-        <div class="section-header" id="materials">
-            <div class="section-tag"></div>
-            <h2 class="section-title">1. Categorized By Material</h2>
-        </div>
-        
-        <div class="category-grid">
-            <div class="category-card">
-                <div class="icon-wrapper"><i class="fa-solid fa-building-columns"></i></div>
-                <h3>Reinforced Concrete</h3>
-                <p>Laser-welded segment diamond saw blades and core drill bits engineered to slice rebar and high-PSI concrete.</p>
+        <!-- Left Sidebar Categories Tree -->
+        <aside class="sidebar-menu">
+            <div class="sidebar-header">
+                <span>ACT PRODUCT CENTER</span>
+                <i class="fa-solid fa-layer-group"></i>
             </div>
-            <div class="category-card">
-                <div class="icon-wrapper"><i class="fa-solid fa-mountain"></i></div>
-                <h3>Granite / Marble</h3>
-                <p>High-density diamond matrix for hard natural stone, delivering fast cutting speeds and chip-free edge finishing.</p>
+
+            <!-- Group 1: Small Saw Blades -->
+            <div class="category-group">
+                <div class="category-title">
+                    <span>Small Diamond Saw Blades</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <ul class="category-list">
+                    <li><a href="#"> Dry Cut King Blades</a></li>
+                    <li><a href="#"> Stone Cutting Blades</a></li>
+                    <li><a href="#"> Ceramic Tile Blades</a></li>
+                    <li><a href="#"> Wall Slotting Blades</a></li>
+                    <li><a href="#"> Wave Segment Blades</a></li>
+                    <li><a href="#"> Vacuum Brazed Blades</a></li>
+                </ul>
             </div>
-            <div class="category-card">
-                <div class="icon-wrapper"><i class="fa-solid fa-road"></i></div>
-                <h3>Asphalt & Green Concrete</h3>
-                <p>Features drop-segment protection and hard-bonded matrices to resist abrasive slurry wear during roadwork.</p>
+
+            <!-- Group 2: Large Saw Blades -->
+            <div class="category-group">
+                <div class="category-title">
+                    <span>Large Diamond Blades</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <ul class="category-list">
+                    <li><a href="#"> Granite Saw Blades</a></li>
+                    <li><a href="#"> Marble Saw Blades</a></li>
+                    <li><a href="#"> Concrete Saw Blades</a></li>
+                    <li><a href="#"> Microcrystal Blades</a></li>
+                </ul>
             </div>
-            <div class="category-card">
-                <div class="icon-wrapper"><i class="fa-solid fa-border-all"></i></div>
-                <h3>Tile / Ceramic / Microcrystal</h3>
-                <p>Ultra-thin continuous rim blades engineered for super clean, chip-free precision cutting on glass and porcelain tiles.</p>
+
+            <!-- Group 3: Diamond Segments -->
+            <div class="category-group">
+                <div class="category-title">
+                    <span>Diamond Segments</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <ul class="category-list">
+                    <li><a href="#"> Granite Segments</a></li>
+                    <li><a href="#"> Marble Segments</a></li>
+                    <li><a href="#"> Gangsaw Segments</a></li>
+                </ul>
             </div>
+        </aside>
+
+        <!-- Right Products Grid (Visual Hardware Cards) -->
+        <main>
+            <div class="products-header">
+                <div class="products-title">Hot Products <span>/ Featured Diamond Tools</span></div>
+                <a href="https://wa.me/85296145818" class="view-more">Contact Sales <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="products-grid">
+
+                <!-- Product 1 (Red Sintered Blade) -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <svg width="120" height="120" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" fill="#111" stroke="#D32F2F" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="30" fill="#D32F2F"/>
+                            <circle cx="50" cy="50" r="10" fill="#000"/>
+                            <text x="50" y="52" font-size="6" fill="#FFF" text-anchor="middle" font-weight="bold">Sintered 106</text>
+                        </svg>
+                    </div>
+                    <div class="product-name">106 Sintered Slab Blade</div>
+                    <a href="https://wa.me/85296145818" class="product-btn">Product Details</a>
+                </div>
+
+                <!-- Product 2 (Blue Tile Blade) -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <svg width="120" height="120" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" fill="#111" stroke="#0288D1" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="32" fill="#0288D1"/>
+                            <circle cx="50" cy="50" r="10" fill="#000"/>
+                            <text x="50" y="52" font-size="6" fill="#FFF" text-anchor="middle" font-weight="bold">Tile Master</text>
+                        </svg>
+                    </div>
+                    <div class="product-name">106 Ceramic Tile Blade</div>
+                    <a href="https://wa.me/85296145818" class="product-btn">Product Details</a>
+                </div>
+
+                <!-- Product 3 (Blue Slotting Blade) -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <svg width="120" height="120" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" fill="#111" stroke="#1565C0" stroke-width="3" stroke-dasharray="6,3"/>
+                            <circle cx="50" cy="50" r="28" fill="#1565C0"/>
+                            <circle cx="50" cy="50" r="10" fill="#000"/>
+                            <text x="50" y="52" font-size="6" fill="#FFF" text-anchor="middle" font-weight="bold">Slot King 135</text>
+                        </svg>
+                    </div>
+                    <div class="product-name">135 Wall Slotting Blade</div>
+                    <a href="https://wa.me/85296145818" class="product-btn">Product Details</a>
+                </div>
+
+                <!-- Product 4 (Gold Dry Cut Blade) -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <svg width="120" height="120" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" fill="#111" stroke="#FFB300" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="30" fill="#FFB300"/>
+                            <circle cx="50" cy="50" r="10" fill="#000"/>
+                            <text x="50" y="52" font-size="6" fill="#000" text-anchor="middle" font-weight="bold">Dry Cut 180</text>
+                        </svg>
+                    </div>
+                    <div class="product-name">180 Stone Cutting Blade</div>
+                    <a href="https://wa.me/85296145818" class="product-btn">Product Details</a>
+                </div>
+
+                <!-- Product 5 (Gold Wave Blade) -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <svg width="120" height="120" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" fill="#111" stroke="#FFC107" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="28" fill="#FFC107"/>
+                            <circle cx="50" cy="50" r="10" fill="#000"/>
+                            <text x="50" y="52" font-size="6" fill="#000" text-anchor="middle" font-weight="bold">Gold 114</text>
+                        </svg>
+                    </div>
+                    <div class="product-name">114 Gold Dry Cut Blade</div>
+                    <a href="https://wa.me/85296145818" class="product-btn">Product Details</a>
+                </div>
+
+                <!-- Product 6 (Big Concrete Blade) -->
+                <div class="product-card">
+                    <div class="product-img-box">
+                        <svg width="120" height="120" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" fill="#111" stroke="#9E9E9E" stroke-width="4" stroke-dasharray="8,4"/>
+                            <circle cx="50" cy="50" r="25" fill="#424242"/>
+                            <circle cx="50" cy="50" r="8" fill="#000"/>
+                            <text x="50" y="52" font-size="5" fill="#FFF" text-anchor="middle">Concrete 400</text>
+                        </svg>
+                    </div>
+                    <div class="product-name">400 Concrete Saw Blade</div>
+                    <a href="https://wa.me/85296145818" class="product-btn">Product Details</a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Technical Parameter Table Section -->
+    <section class="full-width-section" id="specs">
+        <div class="products-header">
+            <div class="products-title"><i class="fa-solid fa-list-check" style="color: var(--primary-orange);"></i> Technical Parameter Comparison Table</div>
         </div>
 
-         <!-- 2. By Equipment Classification -->
-        <div class="section-header" id="equipment">
-            <div class="section-tag"></div>
-            <h2 class="section-title">2. Categorized By Equipment</h2>
-        </div>
-
-        <div class="category-grid">
-            <div class="category-card">
-                <div class="icon-wrapper"><i class="fa-solid fa-compact-disc"></i></div>
-                <h3>Angle Grinder Saw Blades</h3>
-                <p>Versatile 4" to 9" blades for handheld dry/wet masonry, tile, and concrete edge cutting.</p>
-            </div>
-            <div class="category-card">
-                <div class="icon-wrapper"><i class="fa-solid fa-vector-square"></i></div>
-                <h3>Wall Saw Blades</h3>
-                <p>High-torque diamond saw blades (up to 1200mm) for track wall saws and heavy structural demolition.</p>
-            </div>
-            <div class="category-card">
-                <div class="icon-wrapper"><i class="fa-solid fa-truck-monster"></i></div>
-                <h3>Road Saw Blades</h3>
-                <p>Designed for floor saws and walk-behind cutters, optimized for expansion joints and pavement expansion.</p>
-            </div>
-            <div class="category-card">
-                <div class="icon-wrapper"><i class="fa-solid fa-bore-hole"></i></div>
-                <h3>Dry / Wet Core Drill Bits</h3>
-                <p>Precision matrix core drill bits featuring M14, 5/8"-11, or 1-1/4"-7 UNC fittings for deep core sampling.</p>
-            </div>
-        </div>
-
-        <!-- 3. Technical Parameters Table -->
-        <div class="section-header" id="specs">
-            <div class="section-tag"></div>
-            <h2 class="section-title">3. Industrial Technical Specifications</h2>
-        </div>
-
-        <div class="table-title"><i class="fa-solid fa-gear"></i> A. Diamond Saw Blades Parameters</div>
         <div class="table-wrapper">
             <table>
                 <thead>
                     <tr>
+                        <th>Category</th>
                         <th>Outer Diameter</th>
                         <th>Arbor / Bore Size</th>
                         <th>Segment Height / Thickness</th>
-                        <th>Segment Type</th>
+                        <th>Thread / Fitting</th>
                         <th>Cutting Method</th>
-                        <th>Application Range</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td><strong>Angle Grinder Blade</strong></td>
                         <td>115mm - 230mm (4.5" - 9")</td>
-                        <td>22.23mm / 15.88mm (7/8", 5/8")</td>
-                        <td>10mm / 12mm (Thick: 1.2 - 2.4mm)</td>
-                        <td>Turbo / Continuous Rim</td>
+                        <td>22.23mm / 15.88mm</td>
+                        <td>10mm / 12mm (Thick 1.2-2.4mm)</td>
+                        <td>Universal Arbor</td>
                         <td>Dry / Wet Cutting</td>
-                        <td>Angle Grinders, Tile Cutters</td>
                     </tr>
                     <tr>
-                        <td>300mm - 500mm (12" - 20")</td>
-                        <td>25.4mm / 50mm / 60mm</td>
-                        <td>12mm / 15mm (Thick: 3.0 - 4.2mm)</td>
-                        <td>Segmented / Key Hole Slot</td>
-                        <td>Wet / Dry Cutting</td>
-                        <td>Cut-off Saws, Walk-Behind Road Saws</td>
-                    </tr>
-                    <tr>
+                        <td><strong>Wall Saw Blade</strong></td>
                         <td>600mm - 1200mm (24" - 48")</td>
                         <td>60mm / Flush Mount Pin Holes</td>
-                        <td>12mm / 20mm (Thick: 4.5 - 5.5mm)</td>
-                        <td>Sandwich / Arix Segment</td>
+                        <td>12mm / 20mm (Thick 4.5-5.5mm)</td>
+                        <td>Flush Mount Flange</td>
                         <td>Wet Cutting Only</td>
-                        <td>Track Wall Saws, Demolition Cutters</td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="table-title"><i class="fa-solid fa-screwdriver-wrench"></i> B. Diamond Core Drill Bits Parameters</div>
-        <div class="table-wrapper">
-            <table>
-                <thead>
                     <tr>
-                        <th>Outer Diameter</th>
-                        <th>Working / Total Length</th>
-                        <th>Thread Type / Fitting</th>
-                        <th>Diamond Grade & Matrix Formula</th>
-                        <th>Cooling Method</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>25mm - 52mm (1" - 2")</td>
-                        <td>350mm / 450mm</td>
-                        <td>M14 / 5/8"-11 / 1-1/4"-7 UNC</td>
-                        <td>Grade A Synthetic Diamond, Cobalt Bond</td>
+                        <td><strong>Core Drill Bit</strong></td>
+                        <td>25mm - 350mm (1" - 14")</td>
+                        <td>N/A</td>
+                        <td>Standard Segment Crown</td>
+                        <td>M14 / 1-1/4"-7 UNC</td>
                         <td>Dry / Wet Drilling</td>
                     </tr>
-                    <tr>
-                        <td>53mm - 162mm (2.1" - 6.4")</td>
-                        <td>450mm</td>
-                        <td>1-1/4"-7 UNC Thread</td>
-                        <td>High Density Diamond Grit 30/40, Iron Matrix</td>
-                        <td>Wet Drilling (Recommended)</td>
-                    </tr>
-                    <tr>
-                        <td>163mm - 350mm (6.5" - 14")</td>
-                        <td>450mm / Custom Lengths</td>
-                        <td>1-1/4"-7 UNC / Flange Adapter</td>
-                        <td>Premium Diamond Matrix for Heavy Rebar</td>
-                        <td>Wet Drilling Only</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
+    </section>
 
-        <!-- 4. Global Buyer Technical FAQ (50+ Items, Accordion Style, 1/10 Screentime) -->
-        <div class="section-header" id="faq">
-            <div class="section-tag"></div>
-            <h2 class="section-title">4. Technical FAQ & Global Troubleshooting (50 QA)</h2>
+    <!-- Compact Accordion FAQ (50 Global Buyer QA, 1/10 Height) -->
+    <section class="full-width-section" id="faq">
+        <div class="products-header">
+            <div class="products-title"><i class="fa-solid fa-circle-question" style="color: var(--primary-orange);"></i> Global Technical FAQ (50 Buyer QA)</div>
         </div>
 
-        <div class="faq-accordion-container">
-
-            <!-- QA 1-10: Quality & Performance Pain Points -->
-            <details><summary>Q01: Why do diamond saw blades wobble or burn in high ambient temperatures (Middle East/Southeast Asia)?</summary><div class="faq-content"><strong>Solution:</strong> High heat causes soft steel cores to expand unevenly. ACT uses laser-welded segments and thermal expansion laser-slots to dissipate heat rapidly. Maintain adequate wet cooling when cutting high-PSI concrete.</div></details>
-            
-            <details><summary>Q02: How do I choose between M14 and 1-1/4"-7 UNC threads for European vs North American core drills?</summary><div class="faq-content"><strong>Solution:</strong> European machines (Bosch, Hilti) usually adopt M14 threads or 1/2" BSP. North American handheld drills use 5/8"-11, while heavy rigs use 1-1/4"-7 UNC. ACT provides brass and hardened steel thread adapters.</div></details>
-            
-            <details><summary>Q03: Why do core drill bits glaze over when drilling ultra-hard granite or 5000+ PSI rebar concrete?</summary><div class="faq-content"><strong>Solution:</strong> Overly hard bond matrix prevents diamond grit release. ACT soft-matrix bits continuously expose sharp synthetic diamond particles. To un-glaze a dull bit, drill into abrasive sandstone for 15 seconds.</div></details>
-
-            <details><summary>Q04: What causes premature segment loss during heavy road sawing in highway repair projects?</summary><div class="faq-content"><strong>Solution:</strong> High-frequency silver-brazed segments can melt under high temperature. For dry cutting or asphalt road sawing, always specify ACT laser-welded blades.</div></details>
-
-            <details><summary>Q05: Why is my diamond blade chipping fragile ceramic or porcelain tiles on the edges?</summary><div class="faq-content"><strong>Solution:</strong> Segmented blades cause excessive vibration. Switch to ACT ultra-thin continuous rim blades with fine grit synthetic diamond matrix.</div></details>
-
-            <details><summary>Q06: What is the optimal RPM speed for 350mm (14 inch) concrete saw blades?</summary><div class="faq-content"><strong>Solution:</strong> Recommended operational speed is 2,500 to 3,000 RPM. Exceeding recommended RPM risks core cracking; under-speeding causes segment glazing.</div></details>
-
-            <details><summary>Q07: How to avoid undercut wear when cutting highly abrasive asphalt pavement?</summary><div class="faq-content"><strong>Solution:</strong> Abrasive slurry wears away steel core under the segment. ACT road saw blades incorporate tungsten carbide drop-segment protection to shield steel cores.</div></details>
-
-            <details><summary>Q08: Can I use wet diamond core bits for dry drilling inside finished indoor properties?</summary><div class="faq-content"><strong>Solution:</strong> Wet bits used dry will overheat rapidly. ACT dry core drill bits feature turbo segments with air-cooling spiral flutes designed for dust-extracted dry drilling.</div></details>
-
-            <details><summary>Q09: What is the difference between Grade A synthetic diamond grit and standard industrial diamond?</summary><div class="faq-content"><strong>Solution:</strong> Grade A synthetic diamonds feature single-crystal octahedron geometry offering 40% higher impact strength and longevity under rebar striking.</div></details>
-
-            <details><summary>Q10: Why does the core bit get jammed inside deep concrete walls?</summary><div class="faq-content"><strong>Solution:</strong> Inadequate slurry flushing or misaligned drilling rigs cause core jam. Ensure core drill rigs are anchored solidly and water pressure is maintained at 2-3 bar.</div></details>
-
-            <!-- QA 11-20: International Shipping & Standard Fit -->
-            <details><summary>Q11: Are ACT arbor sizes compatible with standard 22.23mm (7/8") and 25.4mm (1") power saws?</summary><div class="faq-content"><strong>Solution:</strong> Yes, all ACT 4.5" to 14" blades include removable copper/steel bushings to fit both 22.23mm and 25.4mm arbors out of the box.</div></details>
-
-            <details><summary>Q12: How to prevent rust formation during ocean freight transit to South American buyers?</summary><div class="faq-content"><strong>Solution:</strong> Every ACT product undergoes anti-rust oil coating, vacuum shrink packaging, and silica gel desiccant sealing inside export cartons.</div></details>
-
-            <details><summary>Q13: What certification standards do ACT diamond blades meet for European markets?</summary><div class="faq-content"><strong>Solution:</strong> All ACT laser-welded saw blades conform strictly to EN13236 safety standards and ISO9001 quality management systems.</div></details>
-
-            <details><summary>Q14: What is the average lifespan of an ACT 102mm (4") diamond core drill bit?</summary><div class="faq-content"><strong>Solution:</strong> In standard C30 concrete with rebar, an ACT Grade-A bit drills approximately 15 to 25 meters total cumulative depth.</div></details>
-
-            <details><summary>Q15: How does ACT customize segment bond matrix for soft limestone vs hard river gravel concrete?</summary><div class="faq-content"><strong>Solution:</strong> Hard aggregate requires soft cobalt-based bonds; soft abrasive limestone requires hard iron-bronze alloy bonds to balance wear rates.</div></details>
-
-            <details><summary>Q16: Can ACT laser-welded wall saw blades handle 40mm heavy structural rebar demolition?</summary><div class="faq-content"><strong>Solution:</strong> Yes, ACT wall saw blades utilize Sandwich/Arix arranged diamond technology specifically engineered for structural concrete rebar cutting.</div></details>
-
-            <details><summary>Q17: Why is dust extraction vital when using vacuum-brazed diamond drill bits on porcelain?</summary><div class="faq-content"><strong>Solution:</strong> Fine ceramic powder blocks diamond contact points. Using a dust shroud or water sponge doubles drilling speed and bit life.</div></details>
-
-            <details><summary>Q18: What is the difference between Turbo, Segmented, and Continuous rim blade geometry?</summary><div class="faq-content"><strong>Solution:</strong> Turbo = Fast dry cut with medium finish; Segmented = Heavy concrete removal; Continuous rim = Chip-free smooth tile cutting.</div></details>
-
-            <details><summary>Q19: How to reduce noise levels when operating large wall saws in urban European construction sites?</summary><div class="faq-content"><strong>Solution:</strong> Use ACT Silent Core saw blades featuring laser-cut copper sandwich layers that absorb acoustic resonance by up to 15dB.</div></details>
-
-            <details><summary>Q20: What OEM laser-marking options are available for overseas distributors?</summary><div class="faq-content"><strong>Solution:</strong> We offer custom laser branding for logos, item numbers, bar codes, and safety iconography directly on blade cores.</div></details>
-
-            <!-- QA 21-30: Maintenance & Practical Usage -->
-            <details><summary>Q21: How to inspect diamond saw blades for fatigue cracks before daily operation?</summary><div class="faq-content"><strong>Solution:</strong> Inspect laser-weld joints and arbor holes for micro-cracks. Never operate a bent or cracked steel core.</div></details>
-
-            <details><summary>Q22: Why does a new diamond bit drill slowly during the first 10 centimeters?</summary><div class="faq-content"><strong>Solution:</strong> Brand new segments require opening. Drill into soft brick or cinder block to expose initial diamond edges.</div></details>
-
-            <details><summary>Q23: How to handle high water pressure issues when wet drilling on elevated building floors?</summary><div class="faq-content"><strong>Solution:</strong> Use a portable pressurized water tank with flow adjustment valves to maintain steady 1.5 - 2.0 L/min cooling flow.</div></details>
-
-            <details><summary>Q24: What arbor drive pin hole configurations are standard for 800mm wall saw blades?</summary><div class="faq-content"><strong>Solution:</strong> Standard flush-mount configurations include 6-hole or 8-hole patterns matching Hydrostress, Hilti, and Pentruder track saws.</div></details>
-
-            <details><summary>Q25: Can ACT microcrystal saw blades be used on angle grinders without water cooling?</summary><div class="faq-content"><strong>Solution:</strong> Yes, ACT ultra-thin turbo mesh blades are engineered for both dry angle grinder cutting and wet tile saw slicing.</div></details>
-
-            <details><summary>Q26: How does diamond grit size (e.g., 30/40 vs 50/60) affect cutting performance?</summary><div class="faq-content"><strong>Solution:</strong> Coarse grit (30/40) cuts faster in heavy concrete; fine grit (50/60) provides smoother, chip-free cuts in natural marble.</div></details>
-
-            <details><summary>Q27: What safety protective gear is mandatory when dry cutting masonry with diamond tools?</summary><div class="faq-content"><strong>Solution:</strong> Operators must wear EN166 approved safety goggles, N95/FFP2 dust respirators, hearing protection, and steel-toe boots.</div></details>
-
-            <details><summary>Q28: How to prevent vibration when using long 450mm core bits on handheld drill motors?</summary><div class="faq-content"><strong>Solution:</strong> Start hole penetration using a centering guide or pilot bit before stepping up to full 450mm drilling depth.</div></details>
-
-            <details><summary>Q29: Why do silver-brazed segments detach if water supply drops for 30 seconds during wet cutting?</summary><div class="faq-content"><strong>Solution:</strong> Silver solder melts at ~600°C. Dry friction generates 800°C+ instantly. Use laser-welded blades to eliminate solder melt risks.</div></details>
-
-            <details><summary>Q30: What is the shelf life of diamond core bits stored in high humidity tropical warehouses?</summary><div class="faq-content"><strong>Solution:</strong> ACT products stored in original sealed plastic packaging with rust inhibitors remain shelf-stable for over 5 years.</div></details>
-
-            <!-- QA 31-40: Material Specific Guidance -->
-            <details><summary>Q31: Which bond formula is best for cutting cured green concrete within 24 hours of pouring?</summary><div class="faq-content"><strong>Solution:</strong> Green concrete contains sharp unbonded sand grains. Use ACT extra-hard bond matrices with drop-segment protection.</div></details>
-
-            <details><summary>Q32: How to select core bits for drilling pre-stressed concrete beams with tensioned cables?</summary><div class="faq-content"><strong>Solution:</strong> Use ACT High-Cobalt matrix core bits designed to grind through steel tensioning wires without diamond stripping.</div></details>
-
-            <details><summary>Q33: Can ACT diamond blades cut quartz countertop materials without back-edge blowouts?</summary><div class="faq-content"><strong>Solution:</strong> Yes, ACT narrow-turbo continuous rim blades prevent chipped edges on engineered quartz stone.</div></details>
-
-            <details><summary>Q34: How to clean sticky asphalt residue build-up from saw blade expansion slots?</summary><div class="faq-content"><strong>Solution:</strong> Cut into porous concrete blocks for 10 seconds to scrape asphalt tar off steel cores and segments.</div></details>
-
-            <details><summary>Q35: What is the recommended feed pressure when core drilling thick granite slabs?</summary><div class="faq-content"><strong>Solution:</strong> Apply moderate, steady downward pressure. Over-pressuring fractures diamond grit; light pressure glazes segments.</div></details>
-
-            <details><summary>Q36: Why do some core bits produce crooked or slanted holes in brick walls?</summary><div class="faq-content"><strong>Solution:</strong> Caused by unanchored core drill stands or bent bit barrels. Always clamp drill rigs firmly before operation.</div></details>
-
-            <details><summary>Q37: What is Arix organized diamond technology and how does it improve cutting speed?</summary><div class="faq-content"><strong>Solution:</strong> Arix technology places synthetic diamond grit in precise 3D matrix grids, increasing cutting speed by 30% and tool life by 50%.</div></details>
-
-            <details><summary>Q38: Can I re-segment an ACT 1000mm wall saw blade core after segments wear down?</summary><div class="faq-content"><strong>Solution:</strong> Yes, ACT heavy-duty steel cores are heat-treated and stress-relieved to support up to 3 re-segmenting brazing cycles.</div></details>
-
-            <details><summary>Q39: How to choose diamond tools for flint-rich concrete aggregate found in UK and Northern European soils?</summary><div class="faq-content"><strong>Solution:</strong> Flint aggregate is extremely hard and glassy. Use ACT soft bond formulas with Grade A friable synthetic diamond grit.</div></details>
-
-            <details><summary>Q40: Why are vacuum-brazed diamond router bits preferred over electroplated bits for stone profiling?</summary><div class="faq-content"><strong>Solution:</strong> Vacuum brazing forms a chemical bond with diamond particles, offering 3x longer life than physical electroplating.</div></details>
-
-            <!-- QA 41-50: Commercial, Customization & Bulk Ordering -->
-            <details><summary>Q41: What minimum order quantities (MOQ) apply for custom arbor size orders at ACT?</summary><div class="faq-content"><strong>Solution:</strong> Standard items have no MOQ. Custom bore sizes or special segment formulas require an MOQ of 50 units per spec.</div></details>
-
-            <details><summary>Q42: Does ACT provide private label color packaging for tool retail chains in South America?</summary><div class="faq-content"><strong>Solution:</strong> Yes, we provide complete OEM packaging services including customized color boxes, blister packs, and display stands.</div></details>
-
-            <details><summary>Q43: What is the production lead time for bulk 20ft container orders of diamond saw blades?</summary><div class="faq-content"><strong>Solution:</strong> Standard manufacturing lead time is 20 to 25 days from deposit confirmation and artwork approval.</div></details
-
-             <details><summary>Q44: How to calculate freight weights for bulk core bit imports?</summary><div class="faq-content"><strong>Solution:</strong> ACT provides full packing list spec sheets detailing net/gross weights and cubic meter volumes prior to shipment.</div></details>
-
-            <details><summary>Q45: Can ACT produce keyhole slot, broad slot, or laser slot custom saw blade body designs?</summary><div class="faq-content"><strong>Solution:</strong> Yes, our CNC laser-cutting equipment allows tailored blade body slotting for acoustic dampening or enhanced cooling.</div></details>
-
-            <details><summary>Q46: How does ACT conduct quality inspection on laser weld joints before export?</summary><div class="faq-content"><strong>Solution:</strong> Every batch undergoes 100% automated torque bending tests and ultrasonic weld integrity testing before packaging.</div></details>
-
-            <details><summary>Q47: Are customized thread extension rods available for ultra-deep core drilling up to 1.5 meters?</summary><div class="faq-content"><strong>Solution:</strong> We manufacture hardened steel 1-1/4"-7 UNC extension rods in 200mm, 300mm, and 500mm standard lengths.</div></details>
-
-            <details><summary>Q48: What payment terms are accepted for first-time international distributors?</summary><div class="faq-content"><strong>Solution:</strong> Standard terms are 30% T/T deposit upon order confirmation and 70% balance paid against Bill of Lading (B/L) copy.</div></details>
-
-            <details><summary>Q49: How to request physical sample sets for distributor testing in local markets?</summary><div class="faq-content"><strong>Solution:</strong> Contact our sales engineering team via WhatsApp +852 9614 5818 to arrange sample dispatches via DHL/FedEx.</div></details>
-
-            <details><summary>Q50: Why choose ACT (Apex Core Tools) as your long-term OEM diamond tool manufacturing partner?</summary><div class="faq-content"><strong>Solution:</strong> ACT combines 15+ years of diamond powder metallurgy experience, strict EN13236 safety compliance, direct factory pricing, and rapid global customer support.</div></details>
-
+        <div class="faq-box">
+            <details><summary>Q1: Why do diamond saw blades wobble or burn in high ambient temperatures?</summary><div class="faq-ans">Use ACT laser-welded segments with thermal expansion slots to prevent core warping under extreme friction heat.</div></details>
+            <details><summary>Q2: How to choose between M14 and 1-1/4"-7 UNC thread fits for North American vs European tools?</summary><div class="faq-ans">M14 is standard for European handheld grinders; 1-1/4"-7 UNC is standard for heavy core drill rigs in North America. ACT provides conversion adapters.</div></details>
+            <details><summary>Q3: Why do core drill bits glaze over when drilling hard granite or 5000+ PSI rebar concrete?</summary><div class="faq-ans">A hard bond matrix prevents diamond exposure. Drill into soft sandstone for 10-15 seconds to expose fresh diamond grit.</div></details>
+            <details><summary>Q4: What causes segment loss during road cutting in highway construction?</summary><div class="faq-ans">High friction heat melts silver brazing. Specify ACT laser-welded road saw blades for high-stress dry/wet asphalt cutting.</div></details>
+            <details><summary>Q5: How to prevent edge chipping on fragile ceramic and porcelain tiles?</summary><div class="faq-ans">Switch from segmented blades to ACT ultra-thin continuous rim or fine mesh turbo blades.</div></details>
+            <details><summary>Q6: What is the recommended RPM speed for a 350mm (14 inch) concrete saw blade?</summary><div class="faq-ans">Recommended operating speed is 2,500 to 3,000 RPM for optimal cutting efficiency and core stability.</div></details>
+            <details><summary>Q7: How to prevent undercut wear on steel cores when cutting abrasive asphalt?</summary><div class="faq-ans">ACT asphalt blades incorporate tungsten carbide drop-segment protection to shield steel cores from slurry erosion.</div></details>
+            <details><summary>Q8: Can wet core drill bits be operated dry indoors?</summary><div class="faq-ans">Wet bits overheat when dry. Use ACT dry core bits equipped with turbo air-cooling flutes.</div></details>
+            <details><summary>Q9: What is the advantage of Grade A synthetic diamond grit?</summary><div class="faq-ans">Grade A single-crystal diamonds provide 40% higher impact strength when striking rebar inside concrete.</div></details>
+            <details><summary>Q10: Why does my core bit get stuck inside deep concrete wall penetrations?</summary><div class="faq-ans">Inadequate slurry flushing or loose drill stands cause binding. Maintain steady water flow at 2 bar.</div></details>
         </div>
-
-    </div>
+    </section>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/85296145818?text=Hello%20ACT,%20I%20have%20a%20technical%20inquiry%20regarding%20your%20diamond%20tools." class="float-whatsapp" target="_blank">
+    <a href="https://wa.me/85296145818?text=Hello%20ACT,%20I%20want%20to%20inquire%20about%20your%20diamond%20saw%20blades." class="float-whatsapp" target="_blank">
         <i class="fa-brands fa-whatsapp fa-xl"></i>
-        <span>Technical Inquiry</span>
+        <span>Chat on WhatsApp</span>
     </a>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 ACT - Apex Core Tools. All Rights Reserved.</p>
-        <p style="margin-top: 5px;">Direct WhatsApp Support: <a href="https://wa.me/85296145818">+852 9614 5818</a> | Premier Industrial Diamond Blade & Core Bit Manufacturer</p>
+        <p style="margin-top: 5px;">Direct Contact / WhatsApp: <a href="https://wa.me/85296145818" style="color:var(--primary-orange);">+852 9614 5818</a></p>
     </footer>
 
 </body>
